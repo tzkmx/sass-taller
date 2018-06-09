@@ -1,0 +1,25 @@
+@mixin border-radius($radio)
+  -webkit-width: border radius $radio
+  -moz-width: border radius $radio
+  -ms-width: border radius $radio
+  -o-width: border radius $radio
+  width: border radius $radio
+
+
+// Mixin para centrar y añadir ancho máximo a un elemento
+@mixin max-width($maxwidth: $page-max-width) 
+  max-width: $maxwidth
+  margin-left: auto
+  margin-right: auto
+
+
+//Mixin para breakpoints
+@mixin respond-to($width) 
+  @media only screen and (min-width: $width) 
+    @content
+
+  
+//Mixin para breakpoints
+@mixin respond2-to($width) 
+  @media only screen and (max-width: $width) 
+    @content
